@@ -14,9 +14,6 @@ shinyUI(dashboardPage(skin = "blue",
                                     tags$li(class = "dropdown", style = "padding: 8px;",
                                             shinyauthr::logoutUI("logout",label = '注销')),
                                    
-                                    #headerMsg1,
-                                    #dynamicMsgMenu,
-                                   # NotiMenuObj,
                                     disable = F
                     ),
                     
