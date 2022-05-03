@@ -1,8 +1,19 @@
-output$distPlot <- renderPlot({
-  # generate bins based on input$bins from ui.R
-  x    <- faithful[, 2]
-  bins <- seq(min(x), max(x), length.out = input$bins + 1)
+mdlMultipleMaterialServer::prdGenServer(input,output,session)
+
+
+mdlMultipleMaterialServer::prdCategoryServer(input,output,session)
+
+mdlMultipleMaterialServer::prdGroupServer(input,output,session)
+
+mdlMultipleMaterialServer::propCategoryServer(input,output,session)
+
+mdlMultipleMaterialServer::propCategoryConfigServer(input,output,session)
+
+mdlMultipleMaterialServer::propValueServer(input,output,session)
+
+mdlMultipleMaterialServer::propValueConfigServer(input,output,session)
+
+
+
   
-  # draw the histogram with the specified number of bins
-  hist(x, breaks = bins, col = 'darkgray', border = 'white')
-})
+

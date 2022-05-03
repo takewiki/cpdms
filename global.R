@@ -17,8 +17,14 @@ library(shinyalert);
 library(rclipboard);
 library(DTedit);
 
+# for ui----
+library(mdlMultipleMaterialUI);
 
-source('00_data.R',encoding = 'utf-8');
+#for server
+library(mdlMultipleMaterialServer)
+
+
+source('00_data.R',encoding = 'utf-8')
 
 
 
