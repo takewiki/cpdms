@@ -4,6 +4,7 @@ tabItem(tabName = "A01",
                              tabBox(title ="多变量物料管理工作台",width = 12,
                                     id='tabSet_row',height = '300px',
                                      mdlMultipleMaterialUI::prdGenUI(),
+                                    mdlMultipleMaterialUI::prdSelUI(),
                                     
                                     mdlMultipleMaterialUI::prdCategoryUI(),
                                     
