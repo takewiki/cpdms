@@ -1,4 +1,3 @@
-print('ui')
 
 
 # 1.00  shinyUI start point----

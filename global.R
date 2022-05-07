@@ -1,31 +1,22 @@
-print('global')
-## global.R ##
+# 设置app标题-----
+
+app_title <-'DMS数据中台V5.1';
+
+# store data into rdbe in the rds database
+app_id <- 'cpdms'
+#upload all the library
+
+#设置链接---
+
+conn_cfg ='config/conn_cfg.R'
+
+tstk::import(app_id = app_id)
+
+
 # 加载R包-----
-enableBookmarking(store = "url")
-library(shiny);
-library(shinydashboard);
-library(tsda);
-library(tsdo);
-library(tsui);
-library(dplyr)
-library(shinyjs)
-library(glue)
-library(shinyauthr)
-library(digest)
-library(shinyWidgets)
-library(tsai);
-library(shinyalert);
-library(rclipboard);
-library(DTedit);
-
-# for ui----
-library(mdlMultipleMaterialUI);
-
-#for server
-library(mdlMultipleMaterialServer)
-
 
 source('00_data.R',encoding = 'utf-8')
+
 
 
 

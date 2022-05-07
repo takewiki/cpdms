@@ -1,13 +1,11 @@
-print('server')
 
 #shinyserver start point----
  shinyServer(function(input, output,session) {
    
-   print(conn)
-   print(app_id)
+
     #00-基础框设置-------------
     #读取用户列表
-    user_base <- getUsers(conn_be,app_id)
+    user_base <- getUsers(app_id = app_id)
     
     
     
@@ -133,7 +131,7 @@ print('server')
        req(credentials()$user_auth)
        
        user_detail <-function(fkey){
-          res <-tsui::userQueryField(conn = conn_be,app_id = app_id,user =user_info()$Fuser,key = fkey)
+          res <-tsui::userQueryField(app_id = app_id,user =user_info()$Fuser,key = fkey)
           return(res)
        } 
        
@@ -164,7 +162,7 @@ print('server')
        
        #res <- setSideBarMenu(conn_be,app_id,user_info()$Fpermissions)
       tstk::debug_print('menu test start ')
-       res <- tsui::menu_getItemData(conn = conn_be,app_id =app_id,permission = user_info()$Fpermissions )
+       res <- tsui::menu_getItemData(app_id =app_id,permission = user_info()$Fpermissions )
        tstk::debug_print('menu test end ')
        return(res)
     })
@@ -199,14 +197,14 @@ print('server')
        
     })
     #针对功能进行处理
-    tstk::debug_print(point = 'load server start ')
+  
     
     ncount_module  =nrow(module_data)
     lapply(1:ncount_module, function(i){
       load_server0(input,output,session,module_id = module_id[i])
     })
     
-    tstk::debug_print(point = 'load server end ')
+    
   
   
 })
