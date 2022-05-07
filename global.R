@@ -1,3 +1,4 @@
+print('global')
 ## global.R ##
 # 加载R包-----
 enableBookmarking(store = "url")
