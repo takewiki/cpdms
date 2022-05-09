@@ -201,7 +201,7 @@
     
     ncount_module  =nrow(module_data)
     lapply(1:ncount_module, function(i){
-      load_server0(input,output,session,module_id = module_id[i])
+      load_server0(input,output,session,module_id = module_id[i],app_id = app_id)
     })
     
     
