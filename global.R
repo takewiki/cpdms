@@ -12,6 +12,9 @@ conn_cfg ='config/conn_cfg.R'
 
 tstk::import(app_id = app_id)
 
+token ='9B6F803F-9D37-41A2-BDA0-70A7179AF0F3'
+
+
 
 # 加载R包-----
 

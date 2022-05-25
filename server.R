@@ -188,6 +188,8 @@
          tstk::debug_print('menu call start 2')
          res = workAreaSetting
          tstk::debug_print('menu call end 2')
+         
+       
           return(res)
          
        } else{
@@ -196,7 +198,25 @@
        
        
     })
+    
+   
+    
     #针对功能进行处理
+    observeEvent(input$prdGen_more_button,{
+      
+      shinyjs::disable(id = 'prdGen_more_button')
+      
+      role_name = user_info()$Fpermissions
+      
+      mdlMultipleMaterialServer::tabPanel_initial_Server(input,output,session,conn_cfg,app_id,role_name )
+      
+      
+    })
+    
+
+  
+      
+
   
     
     ncount_module  =nrow(module_data)
