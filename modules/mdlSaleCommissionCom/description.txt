@@ -1,0 +1,7 @@
+version: 0.1
+step1: modify the module_id in global.R
+step2: modify the file name for mdlxxx_ui.R
+step3: modify the tab_name in mdlxxx_ui.R
+step4: modify the title in mdlxxxx_ui.R
+step5: modify the tab_id in mdlxxxx_ui.R
+step6: modify the file name for mdlxxxx_server.R
