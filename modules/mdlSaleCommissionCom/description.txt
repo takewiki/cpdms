@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 step1: modify the module_id in global.R
 step2: modify the file name for mdlxxx_ui.R
 step3: modify the tab_name in mdlxxx_ui.R
