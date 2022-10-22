@@ -1,6 +1,6 @@
 # 设置app标题-----
 
-app_title <-'DMS数据中台V5.9';
+app_title <-'DMS数据中台V5.10';
 
 # store data into rdbe in the rds database
 app_id <- 'cpdms'
@@ -15,6 +15,8 @@ tstk::import(app_id = app_id)
 token ='9B6F803F-9D37-41A2-BDA0-70A7179AF0F3'
 
 dms_token = '9B6F803F-9D37-41A2-BDA0-70A7179AF0F3'
+
+erp_token='4D181CAB-4CE3-47A3-8F2B-8AB11BB6A227'
 
 config_file ='config/conn_erp.R'
 
