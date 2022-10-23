@@ -214,10 +214,7 @@
     })
     
     
-    #针对对账单据的功能进行设置
-    mdlSalesReconciliationServer::dzd_init_query_server(input=input,output = output,session = session,dms_token = dms_token)
-    
-    mdlSalesReconciliationServer::dzd_init_update_server(input=input,output = output,session = session,erp_token = erp_token)
+
     
 
   
@@ -228,6 +225,24 @@
     ncount_module  =nrow(module_data)
     lapply(1:ncount_module, function(i){
       load_server0(input,output,session,module_id = module_id[i],app_id = app_id)
+    })
+    
+    #针对账进行设置
+    #针对对账单据的功能进行设置
+    #mdlSalesReconciliationServer::dzd_init_query_server(input=input,output = output,session = session,dms_token = dms_token)
+    
+    #mdlSalesReconciliationServer::dzd_init_update_server(input=input,output = output,session = session,erp_token = erp_token)
+    
+    var_cp_dzd_initData_file <- var_file('cp_dzd_initData_file')
+    shiny::observeEvent(input$dzd_initData_query,{
+      file_name = var_cp_dzd_initData_file()
+      if(is.null(file_name)){
+        pop_notice('请选择一个文件')
+      }else{
+        data = cprdspkg::dzd_initData_read(file_name = file_name,lang = 'cn')
+        tsui::run_dataTable2(id = 'dzd_initData_dataView',data = data)
+      }
+      
     })
     
     

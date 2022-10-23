@@ -1,6 +1,6 @@
 # 设置app标题-----
 
-app_title <-'DMS数据中台V5.12';
+app_title <-'DMS数据中台V5.13';
 
 # store data into rdbe in the rds database
 app_id <- 'cpdms'
