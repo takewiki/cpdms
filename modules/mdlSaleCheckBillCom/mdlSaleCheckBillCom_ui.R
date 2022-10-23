@@ -1,8 +1,8 @@
-tabItem(tabName = "mdlSalesReconciliationCom",
+tabItem(tabName = "mdlSaleCheckBillCom",
                     fluidRow(
                       column(width = 12,
                              tabBox(title ="销售对账工作台",width = 12,
-                                    id='tabSet_mdlSalesReconciliationCom',height = '300px',
+                                    id='tabSet_mdlSaleCheckBillCom',height = '300px',
                                     tabPanel('销售对账单更新期初数据',tagList(
                                       fluidRow(column(4,box(
                                         title = "操作区域", width = NULL, solidHeader = TRUE, status = "primary",
