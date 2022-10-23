@@ -232,7 +232,7 @@
     #mdlSalesReconciliationServer::dzd_init_query_server(input=input,output = output,session = session,dms_token = dms_token)
     
     #mdlSalesReconciliationServer::dzd_init_update_server(input=input,output = output,session = session,erp_token = erp_token)
-    
+    #对账单初始设置查询
     var_cp_dzd_initData_file <- var_file('cp_dzd_initData_file')
     shiny::observeEvent(input$dzd_initData_query,{
       file_name = var_cp_dzd_initData_file()
@@ -244,6 +244,29 @@
       }
       
     })
+    #对账单初始设置更新
+    shiny::observeEvent(input$dzd_initData_update,{
+      file_name = var_cp_dzd_initData_file()
+      if(is.null(file_name)){
+        pop_notice('请选择一个文件')
+      }else{
+        data = cprdspkg::dzd_initData_read(file_name = file_name,lang = 'en')
+        ncount = nrow(data)
+        if(ncount >0){
+          try({
+            cprdspkg::dzd_initData_updateAll2(erp_token = erp_token,data = data)
+            pop_notice('更新成功')
+          })
+        }else{
+          pop_notice('更新失败')
+          
+        }
+        
+      }
+      
+      
+    })
+    
     
     
   
