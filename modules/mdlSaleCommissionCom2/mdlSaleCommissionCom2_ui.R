@@ -87,7 +87,7 @@ tabItem(tabName = "mdlSaleCommissionCom2",
                                       ))
                                       
                                     )),
-                                    tabPanel('计算5-奖金提成查询-生产成本',tagList(
+                                    tabPanel('计算5-奖金提成查询-生产成本-销售员',tagList(
                                       fluidRow(column(4,box(
                                         title = "操作区域", width = NULL, solidHeader = TRUE, status = "primary",
                                         mdl_ListChoose1(id = 'cp_pfm_res_options_mfg_query',label = '请选择一个提成规则' ,choiceNames = cprdspkg::outstock_performance_rule_names(config_file = config_file),choiceValues = cprdspkg::outstock_performance_rule_names(config_file=config_file),selected =cprdspkg::outstock_performance_rule_names(config_file=config_file)[1] ),
@@ -109,7 +109,7 @@ tabItem(tabName = "mdlSaleCommissionCom2",
                                       ))
                                       
                                     )),
-                                    tabPanel('报表6-销售提成报表-按业务员-生产成本',tagList(
+                                    tabPanel('报表6-销售提成报表-生产成本',tagList(
                                       fluidRow(column(4,box(
                                         title = "操作区域", width = NULL, solidHeader = TRUE, status = "primary",
                                         mdl_ListChoose1(id = 'cp_pfm_emp_options_mfg_query',label = '请选择一个提成规则' ,choiceNames = cprdspkg::outstock_performance_rule_names(config_file = config_file),choiceValues = cprdspkg::outstock_performance_rule_names(config_file=config_file),selected =cprdspkg::outstock_performance_rule_names(config_file=config_file)[1] ),
